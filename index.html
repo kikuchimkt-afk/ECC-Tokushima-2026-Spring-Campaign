@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>英検対策 無料勉強会｜ECCブランチスクール徳島エリア</title>
-    <meta name="description" content="新感覚アプリで英検対策！2026年春、ECC徳島エリアにて完全無料の勉強会。開催曜日・日時は確定次第ご案内。大学前・藍住・北島中央・板野駅前の生徒さん＆お友だち対象。">
+    <meta name="description" content="新感覚アプリで英検対策！2026年春、ECC徳島エリアにて完全無料の勉強会。大学前・藍住・北島中央・板野駅前の生徒さん＆お友だち対象。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -13,6 +13,9 @@
 <body>
     <!-- Floating particles background -->
     <div class="particles" id="particles"></div>
+
+    <!-- Decorative cherry blossom petals -->
+    <div class="sakura-container" id="sakura"></div>
 
     <!-- ===== HERO SECTION ===== -->
     <header class="hero" id="hero">
@@ -23,8 +26,7 @@
             <span class="hero__title-sub">無料勉強会</span>
         </h1>
         <p class="hero__subtitle animate-fade-in-up delay-1">
-            2026年4月〜5月　<span class="hero__dates">4月<strong>##</strong>日〜／5月<strong>##</strong>日頃まで</span><br>
-            <span class="hero__weekday">毎週<strong>〇</strong>曜日（開催曜日は##）</span><br>
+            2026年4月〜5月　<span class="hero__dates">4月<strong>##</strong>日・5月<strong>##</strong>日</span><br>
             <span class="hero__time"><strong>##：##</strong> 〜 <strong>##：##</strong></span>
         </p>
         <div class="hero__cta animate-fade-in-up delay-2">
@@ -38,7 +40,7 @@
             </a>
         </div>
         <div class="hero__image animate-fade-in-up delay-3">
-            <img src="https://images.pexels.com/photos/5088187/pexels-photo-5088187.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="小学生高学年〜中学生の女子を中心にタブレットで学ぶイメージ（写真はイメージ）" loading="eager" width="900" height="600">
+            <img src="images/hero.jpg" alt="英検対策無料勉強会の様子" loading="eager" width="900" height="674" decoding="async">
         </div>
         <div class="hero__scroll-hint">
             <div class="scroll-arrow"></div>
@@ -173,7 +175,7 @@
         <div class="container">
             <div class="classroom__inner">
                 <div class="classroom__image">
-                    <img src="https://images.unsplash.com/photo-1580582932707-5202ecebd44d?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="明るい教室のイメージ（写真はイメージ）" loading="lazy" width="900" height="600">
+                    <img src="images/classroom.jpg" alt="教室で学ぶ様子" loading="lazy" width="1000" height="628" decoding="async">
                 </div>
                 <div class="classroom__content">
                     <h2 class="section-title section-title--left">
@@ -209,12 +211,8 @@
                     <div class="schedule__value">ECCブランチスクール大学前教室<br><span class="schedule__note-inline">（藍住・北島中央・板野駅前教室での開催案内もあります）</span><br><a href="https://www.ecc-tokushima.com/" target="_blank" rel="noopener" class="schedule__venue-link">教室公式サイト</a></div>
                 </div>
                 <div class="schedule__row">
-                    <div class="schedule__label">📅 期間</div>
-                    <div class="schedule__value">2026年4月<strong>##</strong>日頃 〜 5月<strong>##</strong>日頃</div>
-                </div>
-                <div class="schedule__row">
-                    <div class="schedule__label">🗓️ 曜日</div>
-                    <div class="schedule__value">毎週 <strong>〇</strong>曜日（<strong>##</strong>に確定予定）</div>
+                    <div class="schedule__label">📅 開催日</div>
+                    <div class="schedule__value">4月<strong>##</strong>日、5月<strong>##</strong>日</div>
                 </div>
                 <div class="schedule__row schedule__row--highlight">
                     <div class="schedule__label">⏰ 時間</div>
@@ -242,12 +240,12 @@
 
             <!-- 開催日・曜日はプレースホルダー（確定後に差し替え） -->
             <div class="schedule__calendar">
-                <h3 class="schedule__calendar-title">🌸 4月・5月の開催イメージ（カレンダーは確定後に更新します）</h3>
+                <h3 class="schedule__calendar-title">🌸 4月・5月の開催イメージ（日程は確定後に更新します）</h3>
 
                 <div class="schedule__placeholder-wrap">
                     <div class="schedule__ph-card">
                         <h4 class="schedule__ph-heading">開催日の目安</h4>
-                        <p class="schedule__ph-body"><strong>4月##日</strong>頃から <strong>5月##日</strong>頃までの間、<strong>〇曜日</strong>に毎週開催する予定です。回ごとの日付は<strong>##</strong>に確定し、プリント・LINEなどでお知らせします。</p>
+                        <p class="schedule__ph-body"><strong>4月##日</strong>、<strong>5月##日</strong>の特定の曜日に開催予定です。具体的な日付は確定し次第、プリント・LINEなどでお知らせします。</p>
                     </div>
                     <div class="schedule__ph-card">
                         <h4 class="schedule__ph-heading">時間</h4>
@@ -360,9 +358,9 @@
     <section class="cta" id="apply">
         <div class="container">
             <div class="cta__inner">
-                <div class="cta__emoji">🎯</div>
+                <div class="cta__emoji">🌸</div>
                 <h2 class="cta__title">
-                    ここから始まる、<br>
+                    この春から始まる、<br>
                     <span class="gradient-text">あなたの英検合格ストーリー</span>
                 </h2>
                 <p class="cta__subtitle">参加申し込みはこちらから（30秒で完了）</p>

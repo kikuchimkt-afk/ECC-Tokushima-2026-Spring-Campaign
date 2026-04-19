@@ -11,7 +11,7 @@
 
         body {
             font-family: 'Noto Sans JP', sans-serif;
-            background: #e8f5f0;
+            background: #fef7f0;
             display: flex;
             justify-content: center;
             padding: 10px;
@@ -23,14 +23,16 @@
         .flyer {
             width: 210mm;
             min-height: 297mm;
-            background: linear-gradient(165deg, #fffdf8 0%, #fff5f8 35%, #f0fdf7 100%);
+            background: linear-gradient(165deg, #fffdf8 0%, #fff0f5 25%, #f0fdf7 55%, #fefce8 85%, #fff5f8 100%);
             position: relative;
             box-shadow: 0 2px 20px rgba(15, 23, 42, 0.12);
             padding: 7mm 11mm 6mm;
             display: flex;
             flex-direction: column;
+            overflow: hidden;
         }
 
+        /* Decorative corner accents */
         .flyer::before, .flyer::after {
             content: '';
             position: absolute;
@@ -46,11 +48,24 @@
         }
         .flyer::after {
             bottom: 3mm; right: 3mm;
-            border-bottom: 2.5px solid #fbbf24;
-            border-right: 2.5px solid #fbbf24;
+            border-bottom: 2.5px solid #86efac;
+            border-right: 2.5px solid #86efac;
         }
 
-        .header { text-align: center; margin-bottom: 1.5mm; }
+        /* Sakura decorations */
+        .sakura-deco {
+            position: absolute;
+            font-size: 18pt;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        .sakura-deco--1 { top: 8mm; right: 12mm; transform: rotate(15deg); }
+        .sakura-deco--2 { top: 45mm; left: 5mm; transform: rotate(-20deg); font-size: 14pt; }
+        .sakura-deco--3 { bottom: 50mm; right: 8mm; transform: rotate(30deg); font-size: 22pt; }
+        .sakura-deco--4 { bottom: 25mm; left: 8mm; transform: rotate(-10deg); font-size: 12pt; }
+        .sakura-deco--5 { top: 80mm; right: 5mm; transform: rotate(45deg); font-size: 16pt; }
+
+        .header { text-align: center; margin-bottom: 1.5mm; position: relative; z-index: 1; }
 
         .header__spring {
             font-size: 8.5pt;
@@ -93,10 +108,12 @@
 
         .photo-strip {
             margin: 1.5mm 0 2mm;
-            border-radius: 4px;
+            border-radius: 6px;
             overflow: hidden;
-            border: 2px solid rgba(232, 67, 147, 0.35);
+            border: 2px solid rgba(232, 67, 147, 0.25);
             flex-shrink: 0;
+            position: relative;
+            z-index: 1;
         }
         .photo-strip img {
             width: 100%;
@@ -119,6 +136,8 @@
             padding: 2mm 3mm;
             margin-bottom: 2mm;
             background: rgba(255,255,255,0.75);
+            position: relative;
+            z-index: 1;
         }
 
         .schedule-box__grid {
@@ -179,7 +198,7 @@
         }
         .schedule-box__link a { color: #0d9488; text-decoration: none; }
 
-        .features { margin-bottom: 1.8mm; }
+        .features { margin-bottom: 1.8mm; position: relative; z-index: 1; }
 
         .features__title {
             font-size: 9pt;
@@ -197,12 +216,15 @@
 
         .feature {
             border: 1px solid #e2e8f0;
-            border-radius: 4px;
+            border-radius: 6px;
             padding: 1.8mm 1.5mm;
             text-align: center;
-            background: #fff;
+            background: rgba(255,255,255,0.9);
         }
-        .feature--main { border: 2px solid #e84393; }
+        .feature--main { 
+            border: 2px solid #e84393; 
+            background: linear-gradient(135deg, rgba(252, 231, 243, 0.5), rgba(255,255,255,0.9));
+        }
 
         .feature__icon { font-size: 12pt; margin-bottom: 0.3mm; line-height: 1; }
         .feature__name { font-size: 7.3pt; font-weight: 900; margin-bottom: 0.3mm; }
@@ -213,6 +235,8 @@
             display: flex;
             gap: 2mm;
             margin-bottom: 1.8mm;
+            position: relative;
+            z-index: 1;
         }
 
         .app-section {
@@ -221,7 +245,7 @@
             gap: 2mm;
             align-items: center;
             border: 1px dashed #94a3b8;
-            border-radius: 4px;
+            border-radius: 6px;
             padding: 1.8mm 2.2mm;
             background: rgba(255,255,255,0.65);
         }
@@ -233,7 +257,7 @@
             flex: 0 0 auto;
             width: 50mm;
             border: 1.5px solid #f97316;
-            border-radius: 4px;
+            border-radius: 6px;
             padding: 1.6mm 2.2mm;
             display: flex;
             flex-direction: column;
@@ -254,7 +278,7 @@
         .advanced-note__text { font-size: 6.6pt; line-height: 1.35; color: #57534e; }
         .advanced-note__text strong { color: #c2410c; }
 
-        .exam-section { margin-bottom: 1.8mm; }
+        .exam-section { margin-bottom: 1.8mm; position: relative; z-index: 1; }
 
         .exam-section__title {
             font-size: 8pt;
@@ -281,8 +305,8 @@
             border: 1px solid #e2e8f0;
             padding: 1mm 0.6mm;
             text-align: center;
-            border-radius: 3px;
-            background: #fff;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.9);
         }
 
         .exam-grid__date { font-weight: 800; font-size: 6.3pt; }
@@ -293,7 +317,9 @@
             border-left: 3px solid #e84393;
             margin: 0 0 1.8mm;
             background: rgba(255,255,255,0.5);
-            border-radius: 0 4px 4px 0;
+            border-radius: 0 6px 6px 0;
+            position: relative;
+            z-index: 1;
         }
 
         .message__catch {
@@ -326,6 +352,8 @@
             padding-top: 1.5mm;
             margin-top: auto;
             border-top: 1px solid #fce7f3;
+            position: relative;
+            z-index: 1;
         }
 
         .bottom__info { flex: 1; min-width: 0; }
@@ -356,7 +384,7 @@
             width: 26mm;
             height: 26mm;
             border: 2px solid #e84393;
-            border-radius: 4px;
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -393,6 +421,13 @@
 <body>
     <div class="flyer">
 
+        <!-- Sakura decorations -->
+        <span class="sakura-deco sakura-deco--1">🌸</span>
+        <span class="sakura-deco sakura-deco--2">🌷</span>
+        <span class="sakura-deco sakura-deco--3">🌸</span>
+        <span class="sakura-deco sakura-deco--4">🍀</span>
+        <span class="sakura-deco sakura-deco--5">🌿</span>
+
         <header class="header">
             <p class="header__spring">🌸 SPRING 2026</p>
             <div class="header__free">🎉 参加費 完全無料</div>
@@ -401,7 +436,7 @@
                 英検対策 <span class="header__title-accent">無料勉強会</span>
             </h1>
             <p class="header__subtitle">
-                <strong>4月##日</strong>頃〜<strong>5月##日</strong>頃　毎週<strong>〇</strong>曜（曜日は##）<br>
+                <strong>4月##日</strong>・<strong>5月##日</strong>（特定の曜日に開催）<br>
                 <strong>##：## 〜 ##：##</strong>
             </p>
         </header>
@@ -419,7 +454,7 @@
                     <div class="schedule-box__link"><a href="https://www.ecc-tokushima.com/">https://www.ecc-tokushima.com/</a></div>
                 </span>
                 <span class="schedule-box__label">📅 開催</span>
-                <span class="schedule-box__value">4月<strong>##</strong>日〜5月<strong>##</strong>日頃　毎週<strong>〇</strong>曜</span>
+                <span class="schedule-box__value">4月<strong>##</strong>日、5月<strong>##</strong>日（特定の曜日）</span>
                 <span class="schedule-box__label">⏰ 時間</span>
                 <span class="schedule-box__value schedule-box__value--big">##：## 〜 ##：##</span>
                 <span class="schedule-box__label">💰 費用</span>
@@ -502,7 +537,7 @@
         </div>
 
         <div class="message">
-            <p class="message__catch">「春から、英検の勉強がちょっと楽しみに。」</p>
+            <p class="message__catch">「この春、英検の勉強がちょっと楽しみに。」</p>
             <p class="message__body">
                 英検の勉強、ひとりだと続かない…そんな声に応えるために、<strong>独自開発の学習アプリ</strong>とプロ講師の指導で、基礎力をのばす無料の場をご用意しました。<strong>「できた！」</strong>の積み重ねを、合格への自信に。<strong>お友だちとの参加も大歓迎！</strong>
             </p>

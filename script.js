@@ -1,16 +1,16 @@
-// ===== Floating Particles =====
+// ===== Floating Particles (Spring Theme) =====
 function createParticles() {
     const container = document.getElementById('particles');
     if (!container) return;
 
-    const colors = ['#e84393', '#fbbf24', '#2dd4bf', '#fb7185'];
-    const count = window.innerWidth < 600 ? 15 : 30;
+    const colors = ['#f472b6', '#fbbf24', '#2dd4bf', '#fb923c', '#a78bfa'];
+    const count = window.innerWidth < 600 ? 12 : 25;
 
     for (let i = 0; i < count; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
 
-        const size = Math.random() * 6 + 3;
+        const size = Math.random() * 5 + 2;
         const color = colors[Math.floor(Math.random() * colors.length)];
         const left = Math.random() * 100;
         const duration = Math.random() * 20 + 15;
@@ -27,10 +27,38 @@ function createParticles() {
     }
 }
 
+// ===== Cherry Blossom Petals =====
+function createSakuraPetals() {
+    const container = document.getElementById('sakura');
+    if (!container) return;
+
+    const petalCount = window.innerWidth < 600 ? 10 : 20;
+
+    for (let i = 0; i < petalCount; i++) {
+        const petal = document.createElement('div');
+        petal.classList.add('sakura-petal');
+
+        const size = Math.random() * 12 + 8;
+        const left = Math.random() * 100;
+        const duration = Math.random() * 10 + 8;
+        const delay = Math.random() * 15;
+        const sway = Math.random() * 100 + 50;
+
+        petal.style.width = `${size}px`;
+        petal.style.height = `${size}px`;
+        petal.style.left = `${left}%`;
+        petal.style.animationDuration = `${duration}s`;
+        petal.style.animationDelay = `-${delay}s`;
+        petal.style.setProperty('--sway', `${sway}px`);
+
+        container.appendChild(petal);
+    }
+}
+
 // ===== Scroll Reveal =====
 function initScrollReveal() {
     const revealElements = document.querySelectorAll(
-        '.pain__card, .about__point, .feature-card, .classroom__list li, .schedule__card, .schedule__month, .faq__item, .features__advanced'
+        '.pain__card, .about__point, .feature-card, .classroom__list li, .schedule__card, .schedule__month, .faq__item, .features__advanced, .schedule__ph-card'
     );
 
     revealElements.forEach(el => el.classList.add('reveal'));
@@ -128,6 +156,7 @@ function initCtaPulse() {
 // ===== Initialize =====
 document.addEventListener('DOMContentLoaded', () => {
     createParticles();
+    createSakuraPetals();
     initScrollReveal();
     initSmoothScroll();
     initParallax();
