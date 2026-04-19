@@ -1413,7 +1413,7 @@ a {
     }
 }
 
-/* ===== 徳島LP：日程プレースホルダー・リンク ===== */
+/* ===== 徳島LP：日程・リンク ===== */
 .hero__dates,
 .hero__weekday {
     font-size: 0.95em;
@@ -1423,6 +1423,37 @@ a {
 .hero__dates strong,
 .hero__weekday strong {
     color: var(--color-primary-dark);
+}
+
+/* Hero: dual time display */
+.hero__time-dual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-top: 6px;
+}
+
+.hero__time-badge {
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    color: #fff;
+    background: var(--color-primary);
+}
+
+.hero__time-sep {
+    color: var(--color-text-dim);
+    font-weight: 400;
+    margin: 0 2px;
 }
 
 .schedule__venue-link {
@@ -1439,56 +1470,176 @@ a {
     color: var(--color-secondary);
 }
 
-.schedule__placeholder-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    max-width: 520px;
-    margin: 0 auto 28px;
-    text-align: left;
+/* Schedule: time chips (day-of-week indicators) */
+.schedule__time-dual {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
 }
 
-.schedule__ph-card {
+.schedule__time-chip {
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: 0.68rem;
+    font-weight: 800;
+    padding: 2px 10px;
+    border-radius: var(--radius-full);
+    color: #fff;
+}
+
+.schedule__time-chip--tw {
+    background: linear-gradient(135deg, #e84393, #f472b6);
+}
+
+.schedule__time-chip--th {
+    background: linear-gradient(135deg, #7c3aed, #a78bfa);
+}
+
+/* Schedule: warning note */
+.schedule__note-warn {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #ea580c;
+}
+
+/* ===== Weekly Schedule Grid ===== */
+.schedule__weekly {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.schedule__time-guide {
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.week-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
-    padding: 18px 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.week-block:hover {
+    transform: translateY(-2px);
     box-shadow: var(--shadow-card);
 }
 
-.schedule__ph-heading {
-    font-size: 0.95rem;
+.week-block--skip {
+    background: rgba(251, 191, 36, 0.08);
+    border-style: dashed;
+    border-color: rgba(251, 191, 36, 0.4);
+    opacity: 0.7;
+}
+
+.week-block__label {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
     font-weight: 800;
     color: var(--color-primary-dark);
-    margin-bottom: 8px;
+    background: rgba(232, 67, 147, 0.1);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
+    min-width: 48px;
+    text-align: center;
 }
 
-.schedule__ph-body {
-    font-size: 0.88rem;
-    color: var(--color-text-muted);
-    line-height: 1.75;
+.week-block--skip .week-block__label {
+    background: rgba(251, 191, 36, 0.2);
+    color: #92400e;
 }
 
-.schedule__ph-time {
-    font-family: var(--font-display);
-    font-size: 1.25rem !important;
-    color: var(--color-text) !important;
-    font-weight: 800;
-}
-
-.schedule__ph-link {
-    margin-top: 10px;
+.week-block__skip-text {
     font-size: 0.82rem;
+    color: var(--color-text-dim);
+    font-weight: 500;
 }
 
-.schedule__ph-link a {
-    color: var(--color-secondary);
+.week-block__days {
+    display: flex;
+    gap: 8px;
+    flex: 1;
+}
+
+.week-day {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 8px;
+    border-radius: var(--radius-sm);
+    transition: transform 0.2s ease;
+    min-height: 56px;
+}
+
+.week-day:hover {
+    transform: scale(1.05);
+}
+
+.week-day--tw {
+    background: rgba(232, 67, 147, 0.1);
+    border: 1.5px solid rgba(232, 67, 147, 0.3);
+}
+
+.week-day--th {
+    background: rgba(124, 58, 237, 0.1);
+    border: 1.5px solid rgba(124, 58, 237, 0.3);
+}
+
+.week-day__date {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--color-text);
+    line-height: 1;
+}
+
+.week-day__dow {
+    font-size: 0.68rem;
     font-weight: 700;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    word-break: break-all;
+    margin-top: 3px;
 }
 
+.week-day--tw .week-day__dow {
+    color: var(--color-primary);
+}
+
+.week-day--th .week-day__dow {
+    color: #7c3aed;
+}
+
+/* Notices */
+.schedule__notices {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.schedule__notice {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Footer */
 .footer__link {
     font-size: 0.82rem;
     margin-bottom: 12px;
@@ -1500,6 +1651,7 @@ a {
     text-underline-offset: 3px;
     word-break: break-all;
 }
+
 
 /* ===== SAKURA PETALS ===== */
 .sakura-container {

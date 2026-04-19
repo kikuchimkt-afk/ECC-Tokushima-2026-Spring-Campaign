@@ -26,8 +26,12 @@
             <span class="hero__title-sub">無料勉強会</span>
         </h1>
         <p class="hero__subtitle animate-fade-in-up delay-1">
-            2026年4月〜5月　<span class="hero__dates">4月<strong>##</strong>日・5月<strong>##</strong>日</span><br>
-            <span class="hero__time"><strong>##：##</strong> 〜 <strong>##：##</strong></span>
+            4/21（火）〜 5/28（木）<span class="hero__dates">毎週 <strong>火・水・木</strong></span><br>
+            <span class="hero__time-dual">
+                <span class="hero__time-badge">火・水</span> 18:15〜19:00
+                <span class="hero__time-sep">/</span>
+                <span class="hero__time-badge">木</span> 21:00〜22:00
+            </span>
         </p>
         <div class="hero__cta animate-fade-in-up delay-2">
             <a href="https://forms.gle/BstxuWoHNqRtXBmQA" target="_blank" rel="noopener" class="btn btn--primary btn--glow">
@@ -205,18 +209,26 @@
                 <span class="section-title__emoji">📅</span>
                 開催スケジュール
             </h2>
+            <!-- 基本情報 -->
             <div class="schedule__card">
                 <div class="schedule__row schedule__row--highlight">
                     <div class="schedule__label">📍 会場</div>
-                    <div class="schedule__value">ECCブランチスクール大学前教室<br><span class="schedule__note-inline">（藍住・北島中央・板野駅前教室での開催案内もあります）</span><br><a href="https://www.ecc-tokushima.com/" target="_blank" rel="noopener" class="schedule__venue-link">教室公式サイト</a></div>
+                    <div class="schedule__value">ECCブランチスクール大学前教室<br><a href="https://www.ecc-tokushima.com/" target="_blank" rel="noopener" class="schedule__venue-link">教室公式サイト</a></div>
                 </div>
                 <div class="schedule__row">
-                    <div class="schedule__label">📅 開催日</div>
-                    <div class="schedule__value">4月<strong>##</strong>日、5月<strong>##</strong>日</div>
+                    <div class="schedule__label">📅 期間</div>
+                    <div class="schedule__value">4/21（火）〜 5/28（木）<br>毎週 <strong>火・水・木</strong></div>
                 </div>
                 <div class="schedule__row schedule__row--highlight">
                     <div class="schedule__label">⏰ 時間</div>
-                    <div class="schedule__value schedule__value--big"><strong>##：##</strong> 〜 <strong>##：##</strong></div>
+                    <div class="schedule__value">
+                        <span class="schedule__time-dual">
+                            <span class="schedule__time-chip schedule__time-chip--tw">火・水</span> 18:15〜19:00
+                        </span><br>
+                        <span class="schedule__time-dual">
+                            <span class="schedule__time-chip schedule__time-chip--th">木</span> 21:00〜22:00
+                        </span>
+                    </div>
                 </div>
                 <div class="schedule__row">
                     <div class="schedule__label">💰 費用</div>
@@ -230,64 +242,106 @@
                 </div>
                 <div class="schedule__row">
                     <div class="schedule__label">📱 持ち物</div>
-                    <div class="schedule__value">スマートフォン or タブレット<br><span class="schedule__note-inline">※ お持ちでない場合は教室でご用意します</span></div>
+                    <div class="schedule__value"><strong>タブレット＋イヤホン</strong>（持参必須）<br><span class="schedule__note-warn">※ 持参できる方のみお申し込みいただけます</span></div>
                 </div>
                 <div class="schedule__row schedule__row--highlight">
                     <div class="schedule__label">👤 定員</div>
-                    <div class="schedule__value"><span class="schedule__capacity">各回 6名</span>（少人数制）</div>
+                    <div class="schedule__value"><span class="schedule__capacity">各回 5名</span>（少人数制）</div>
                 </div>
             </div>
 
-            <!-- 開催日・曜日はプレースホルダー（確定後に差し替え） -->
-            <div class="schedule__calendar">
-                <h3 class="schedule__calendar-title">🌸 4月・5月の開催イメージ（日程は確定後に更新します）</h3>
+            <!-- 週ごとスケジュール -->
+            <div class="schedule__weekly">
+                <h3 class="schedule__calendar-title">🌸 全15回の開催スケジュール</h3>
+                <p class="schedule__time-guide">
+                    <span class="schedule__time-chip schedule__time-chip--tw">火・水</span> 18:15〜19:00　
+                    <span class="schedule__time-chip schedule__time-chip--th">木</span> 21:00〜22:00
+                </p>
 
-                <div class="schedule__placeholder-wrap">
-                    <div class="schedule__ph-card">
-                        <h4 class="schedule__ph-heading">開催日の目安</h4>
-                        <p class="schedule__ph-body"><strong>4月##日</strong>、<strong>5月##日</strong>の特定の曜日に開催予定です。具体的な日付は確定し次第、プリント・LINEなどでお知らせします。</p>
+                <!-- Week 1 -->
+                <div class="week-block">
+                    <div class="week-block__label">第1週</div>
+                    <div class="week-block__days">
+                        <div class="week-day week-day--tw"><span class="week-day__date">4/21</span><span class="week-day__dow">火</span></div>
+                        <div class="week-day week-day--tw"><span class="week-day__date">4/22</span><span class="week-day__dow">水</span></div>
+                        <div class="week-day week-day--th"><span class="week-day__date">4/24</span><span class="week-day__dow">木</span></div>
                     </div>
-                    <div class="schedule__ph-card">
-                        <h4 class="schedule__ph-heading">時間</h4>
-                        <p class="schedule__ph-body schedule__ph-time"><strong>##：##</strong> 〜 <strong>##：##</strong></p>
+                </div>
+                <!-- Week 2 -->
+                <div class="week-block">
+                    <div class="week-block__label">第2週</div>
+                    <div class="week-block__days">
+                        <div class="week-day week-day--tw"><span class="week-day__date">4/28</span><span class="week-day__dow">火</span></div>
+                        <div class="week-day week-day--tw"><span class="week-day__date">4/29</span><span class="week-day__dow">水</span></div>
+                        <div class="week-day week-day--th"><span class="week-day__date">4/30</span><span class="week-day__dow">木</span></div>
                     </div>
-                    <div class="schedule__ph-card">
-                        <h4 class="schedule__ph-heading">会場・アクセス</h4>
-                        <p class="schedule__ph-body">主会場：<strong>ECCブランチスクール大学前教室</strong>（〒770-0815 徳島県徳島市助任橋1-22 渭水ビル2F）<br>エリア内の姉妹教室で実施する回がある場合も、事前にご案内します。</p>
-                        <p class="schedule__ph-link"><a href="https://www.ecc-tokushima.com/" target="_blank" rel="noopener">https://www.ecc-tokushima.com/</a></p>
+                </div>
+                <!-- GW skip -->
+                <div class="week-block week-block--skip">
+                    <div class="week-block__label">GW</div>
+                    <div class="week-block__skip-text">5/5週はお休みです 🌴</div>
+                </div>
+                <!-- Week 3 -->
+                <div class="week-block">
+                    <div class="week-block__label">第3週</div>
+                    <div class="week-block__days">
+                        <div class="week-day week-day--tw"><span class="week-day__date">5/12</span><span class="week-day__dow">火</span></div>
+                        <div class="week-day week-day--tw"><span class="week-day__date">5/13</span><span class="week-day__dow">水</span></div>
+                        <div class="week-day week-day--th"><span class="week-day__date">5/14</span><span class="week-day__dow">木</span></div>
+                    </div>
+                </div>
+                <!-- Week 4 -->
+                <div class="week-block">
+                    <div class="week-block__label">第4週</div>
+                    <div class="week-block__days">
+                        <div class="week-day week-day--tw"><span class="week-day__date">5/19</span><span class="week-day__dow">火</span></div>
+                        <div class="week-day week-day--tw"><span class="week-day__date">5/20</span><span class="week-day__dow">水</span></div>
+                        <div class="week-day week-day--th"><span class="week-day__date">5/21</span><span class="week-day__dow">木</span></div>
+                    </div>
+                </div>
+                <!-- Week 5 -->
+                <div class="week-block">
+                    <div class="week-block__label">第5週</div>
+                    <div class="week-block__days">
+                        <div class="week-day week-day--tw"><span class="week-day__date">5/26</span><span class="week-day__dow">火</span></div>
+                        <div class="week-day week-day--tw"><span class="week-day__date">5/27</span><span class="week-day__dow">水</span></div>
+                        <div class="week-day week-day--th"><span class="week-day__date">5/28</span><span class="week-day__dow">木</span></div>
                     </div>
                 </div>
 
-                <!-- Exam schedule table -->
-                <div class="exam-table">
-                    <div class="exam-table__title">📄 2026年度 第1回 英検一次試験日程（参考）</div>
-                    <div class="exam-table__row">
-                        <span class="exam-table__date">5/22（金）</span>
-                        <span class="exam-table__label">準会場A日程</span>
-                    </div>
-                    <div class="exam-table__row">
-                        <span class="exam-table__date">5/23（土）</span>
-                        <span class="exam-table__label">準会場B日程</span>
-                    </div>
-                    <div class="exam-table__row">
-                        <span class="exam-table__date">5/24（日）</span>
-                        <span class="exam-table__label">準会場C日程</span>
-                    </div>
-                    <div class="exam-table__row">
-                        <span class="exam-table__date">5/29（金）</span>
-                        <span class="exam-table__label">準会場D日程</span>
-                    </div>
-                    <div class="exam-table__row exam-table__row--highlight">
-                        <span class="exam-table__date">5/30（土）</span>
-                        <span class="exam-table__label exam-table__label--venue">準会場E日程（受験会場は受験票・公式情報でご確認ください）</span>
-                    </div>
-                    <div class="exam-table__row">
-                        <span class="exam-table__date">5/31（日）</span>
-                        <span class="exam-table__label">本会場 / 準会場F日程</span>
-                    </div>
+                <div class="schedule__notices">
+                    <p class="schedule__notice">⚠️ 人数の集まり具合により、開催しない日程もあります</p>
+                    <p class="schedule__notice">✅ 途中参加・途中退出OK！お気軽にご参加ください</p>
                 </div>
+            </div>
 
-                <p class="schedule__note">※ 途中参加・途中退出OK！お気軽にご参加ください</p>
+            <!-- Exam schedule table -->
+            <div class="exam-table">
+                <div class="exam-table__title">📄 2026年度 第1回 英検一次試験日程（参考）</div>
+                <div class="exam-table__row">
+                    <span class="exam-table__date">5/22（金）</span>
+                    <span class="exam-table__label">準会場A日程</span>
+                </div>
+                <div class="exam-table__row">
+                    <span class="exam-table__date">5/23（土）</span>
+                    <span class="exam-table__label">準会場B日程</span>
+                </div>
+                <div class="exam-table__row">
+                    <span class="exam-table__date">5/24（日）</span>
+                    <span class="exam-table__label">準会場C日程</span>
+                </div>
+                <div class="exam-table__row">
+                    <span class="exam-table__date">5/29（金）</span>
+                    <span class="exam-table__label">準会場D日程</span>
+                </div>
+                <div class="exam-table__row exam-table__row--highlight">
+                    <span class="exam-table__date">5/30（土）</span>
+                    <span class="exam-table__label exam-table__label--venue">準会場E日程（受験会場は受験票・公式情報でご確認ください）</span>
+                </div>
+                <div class="exam-table__row">
+                    <span class="exam-table__date">5/31（日）</span>
+                    <span class="exam-table__label">本会場 / 準会場F日程</span>
+                </div>
             </div>
         </div>
     </section>
@@ -347,7 +401,7 @@
                     </summary>
                     <div class="faq__answer">
                         <span class="faq__a">A</span>
-                        スマートフォンまたはタブレットをお持ちください。筆記用具もあると便利です。
+                        <strong>タブレットとイヤホン</strong>をお持ちください（持参必須）。今回は機器の貸出はございませんので、持参できる方のみお申し込みいただけます。筆記用具もあると便利です。
                     </div>
                 </details>
             </div>
